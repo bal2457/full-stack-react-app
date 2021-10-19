@@ -1,16 +1,15 @@
 import { ActionCreators } from "../redux/notesReducer";
+import axios from 'axios';
+
+const axiosInstance = axios.create({
+    baseURL: 'https://localhost:5001/notes',
+})
 
 export const GetNotes = async (dispatch) => {
     try {
         //api call
-        const response = [
-            { value: 'Study for exam in 3 weeks', id: 1 },
-            { value: 'At this rate I will be a master in no time', id: 2 },
-            { value: 'Build more full-stack applications', id: 3 },
-            { value: 'I love writing notes', id: 4 },
-        ];
-
-        dispatch(ActionCreators.setNotes(response));
+        const { data } = await axiosInstance.get();
+        dispatch(ActionCreators.setNotes(data));
     } catch {
         console.log('Error!');
     }
@@ -19,6 +18,7 @@ export const GetNotes = async (dispatch) => {
 export const DeleteNote = async (dispatch, note) => {
     try {
         //api call
+        await axiosInstance.delete(`/${note.id}`);
         dispatch(ActionCreators.deleteNote(note));
     } catch {
         console.log('Error!');
@@ -28,8 +28,8 @@ export const DeleteNote = async (dispatch, note) => {
 export const NewNote = async (dispatch, note) => {
     try {
         //api call
-        const response = { value: note, id: 1 };
-        dispatch(ActionCreators.newNote(response));
+        const { data } = await axiosInstance.post('', note)
+        dispatch(ActionCreators.newNote(data));
     } catch {
         console.log('Error!');
     }
@@ -38,8 +38,8 @@ export const NewNote = async (dispatch, note) => {
 export const EditNote = async (dispatch, note) => {
     try {
         //api call
-        const response = { value: note, id: 1 };
-        dispatch(ActionCreators.editNote(response));
+        await axiosInstance.put('', note);
+        dispatch(ActionCreators.editNote(note));
     } catch {
         console.log('Error!');
     }

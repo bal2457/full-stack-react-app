@@ -33,7 +33,6 @@ E:\Coding Projects\notes.frontend\asp.net web api\Notes.WebApo\Notes.WebApo\obj\
 E:\Coding Projects\notes.frontend\asp.net web api\Notes.WebApo\Notes.WebApo\obj\Debug\netcoreapp3.1\staticwebassets\Notes.WebApi.StaticWebAssets.xml
 E:\Coding Projects\notes.frontend\asp.net web api\Notes.WebApo\Notes.WebApo\obj\Debug\netcoreapp3.1\scopedcss\bundle\Notes.WebApi.styles.css
 E:\Coding Projects\notes.frontend\asp.net web api\Notes.WebApo\Notes.WebApo\obj\Debug\netcoreapp3.1\Notes.WebApi.RazorTargetAssemblyInfo.cache
-E:\Coding Projects\notes.frontend\asp.net web api\Notes.WebApo\Notes.WebApo\obj\Debug\netcoreapp3.1\Notes.WebApi.csproj.CopyComplete
 E:\Coding Projects\notes.frontend\asp.net web api\Notes.WebApo\Notes.WebApo\obj\Debug\netcoreapp3.1\Notes.WebApi.dll
 E:\Coding Projects\notes.frontend\asp.net web api\Notes.WebApo\Notes.WebApo\obj\Debug\netcoreapp3.1\Notes.WebApi.pdb
 E:\Coding Projects\notes.frontend\asp.net web api\Notes.WebApo\Notes.WebApo\obj\Debug\netcoreapp3.1\Notes.WebApi.genruntimeconfig.cache
@@ -64,3 +63,5 @@ E:\Coding Projects\notes.frontend\asp.net web api\Notes.WebApo\Notes.WebApo\bin\
 E:\Coding Projects\notes.frontend\asp.net web api\Notes.WebApo\Notes.WebApo\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 E:\Coding Projects\notes.frontend\asp.net web api\Notes.WebApo\Notes.WebApo\bin\Debug\netcoreapp3.1\Notes.DB.dll
 E:\Coding Projects\notes.frontend\asp.net web api\Notes.WebApo\Notes.WebApo\bin\Debug\netcoreapp3.1\Notes.DB.pdb
+E:\Coding Projects\notes.frontend\asp.net web api\Notes.WebApo\Notes.WebApo\bin\Debug\netcoreapp3.1\Notes.Core.dll
+E:\Coding Projects\notes.frontend\asp.net web api\Notes.WebApo\Notes.WebApo\bin\Debug\netcoreapp3.1\Notes.Core.pdb

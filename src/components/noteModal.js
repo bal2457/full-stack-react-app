@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { FormControl, InputGroup, Modal, Form, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { EditNote, NewNote } from "../services/notes";
@@ -28,7 +28,7 @@ export const EditNoteModal = ({ note }) => {
 }
 
 const NoteModal = ({ note, handleFormSubmit, show, handleClose }) => {
-    const [modalNote, setModalNote] = useState('');
+    const [modalNote, setModalNote] = useState({});
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -36,18 +36,18 @@ const NoteModal = ({ note, handleFormSubmit, show, handleClose }) => {
     }, [note]);
 
     return (
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
-                </Modal.Header>
-                <Form onSubmit ={event => {
-                    event.preventDefault();
-                    handleFormSubmit(dispatch, modalNote);
-                }}>
+        <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+                <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Form onSubmit={event => {
+                event.preventDefault();
+                handleFormSubmit(dispatch, modalNote);
+            }}>
                 <Modal.Body>
                     <InputGroup>
-                        <FormControl value={modalNote === null ? '' : modalNote}
-                            onChange={event => setModalNote(event.target.value)}/>
+                        <FormControl value={modalNote === null ? '' : modalNote.value}
+                            onChange={event => setModalNote({ ...modalNote, value: event.target.value })} />
                     </InputGroup>
                 </Modal.Body>
                 <Modal.Footer>
@@ -58,7 +58,7 @@ const NoteModal = ({ note, handleFormSubmit, show, handleClose }) => {
                         Save
                     </Button>
                 </Modal.Footer>
-                </Form>
-            </Modal>
+            </Form>
+        </Modal>
     );
 }
